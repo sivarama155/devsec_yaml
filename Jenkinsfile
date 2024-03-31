@@ -36,7 +36,8 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install && npm audit fix --force'
+                sh 'npm install'
+                sh 'npm audit fix'
             }
         }
         stage('OWASP FS SCAN') {
