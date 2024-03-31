@@ -36,8 +36,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
-                sh 'npm audit fix'
+                sh 'npm install @jridgewell/sourcemap-codec'
             }
         }
         stage('OWASP FS SCAN') {
