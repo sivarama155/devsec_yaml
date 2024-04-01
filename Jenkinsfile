@@ -8,6 +8,7 @@ pipeline {
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
+        MY_VARIABLE = 'Netflix'
     }
     stages {
         stage('clean workspace') {
