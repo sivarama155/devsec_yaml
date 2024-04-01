@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git()
+                repo()
             }
         }
         stage('Sonarqube Analysis ') {
