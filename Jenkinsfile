@@ -1,6 +1,6 @@
 /* groovylint-disable CompileStatic, UnusedVariable */
 /* groovylint-disable-next-line UnusedVariable */
-@Library('my-library') _
+@Library('my-library/vars') _
 pipeline {
     agent any
     tools {
