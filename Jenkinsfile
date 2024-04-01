@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                scm()
+                netflix()
             }
         }
         stage('Sonarqube Analysis ') {
