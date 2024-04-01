@@ -1,4 +1,6 @@
-
+/* groovylint-disable CompileStatic, UnusedVariable */
+/* groovylint-disable-next-line UnusedVariable */
+@Library('my-library') _
 pipeline {
     agent any
     tools {
@@ -15,7 +17,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/N4si/DevSecOps-Project.git'
+                scm()
             }
         }
         stage('Sonarqube Analysis ') {
