@@ -1,4 +1,4 @@
-/* groovylint-disable CompileStatic, UnusedVariable */
+/* groovylint-disable CompileStatic, DuplicateStringLiteral, NestedBlockDepth, UnusedVariable */
 /* groovylint-disable-next-line UnusedVariable */
 @Library('my-library') _
 pipeline {
@@ -34,6 +34,7 @@ pipeline {
         stage('Docker Build & Push') {
             steps {
                 script {
+                    /* groovylint-disable-next-line DuplicateStringLiteral */
                     withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
                         sh 'docker build --build-arg TMDB_V3_API_KEY=4b44f3548a8cd7c67f528d7acf819e87 -t netflixer .'
                         sh 'docker tag netflixer sivaramaprasaditrajula/netflixer:latest '
