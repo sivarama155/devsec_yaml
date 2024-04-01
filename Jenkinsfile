@@ -17,15 +17,12 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                netflix()
+                git()
             }
         }
         stage('Sonarqube Analysis ') {
             steps {
-                withSonarQubeEnv('sonar') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Netflix \
-                    -Dsonar.projectKey=Netflix '''
-                }
+                sonar()
             }
         }
         stage('TRIVY FS SCAN') {
