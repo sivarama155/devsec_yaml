@@ -1,6 +1,6 @@
 /* groovylint-disable CompileStatic, UnusedVariable */
 /* groovylint-disable-next-line UnusedVariable */
-@Library('my-library/vars') _
+@Library('my-library/vars/netflix.groovy') _
 pipeline {
     agent any
     tools {
