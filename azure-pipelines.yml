@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: sh1
+  name: Agent1
 
 steps:
 - task: NodeTool@0
