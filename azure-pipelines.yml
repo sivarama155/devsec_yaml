@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: sh1
 
 steps:
 - task: NodeTool@0
